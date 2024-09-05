@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host --port=5001",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "@pinia/nuxt": "^0.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "numeral": "^2.0.6",
+    "nuxt": "^3.12.2",
+    "sass": "^1.77.6",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "vue": "latest",
+    "vuetify": "^3.6.10"
+  }
+}
