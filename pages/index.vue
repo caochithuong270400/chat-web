@@ -33,6 +33,9 @@
         </template>
       </v-progress-linear>
     </v-card-title>
+    <v-card-actions>
+      <v-btn @click="getData()"> GET DATA </v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 
@@ -45,6 +48,23 @@ export default {
       yellowBufferWidth: 15, // Phần trăm chiều rộng của màu vàng
       purpleBufferWidth: 15, // Phần trăm chiều rộng của màu vàng
     };
+  },
+  methods: {
+    async getData() {
+      try {
+        const { resultsBills } = await $fetch("/api/test/schedue-hasura", {
+          method: "post",
+          body: {
+            user: "a",
+          },
+        });
+        if (resultsBills) {
+          console.log("resultsBills", resultsBills);
+        }
+      } catch (error) {
+        console.log("lỗi:", error);
+      }
+    },
   },
 };
 </script>

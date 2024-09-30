@@ -28,6 +28,7 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(3001, () => {
-    console.log('WebSocket server is running on port 3001');
+const port = 3001
+server.listen(port, () => {
+    console.log('WebSocket server is running on port', port);
 });
